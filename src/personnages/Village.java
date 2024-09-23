@@ -30,4 +30,10 @@ public class Village {
 		return "Village [nom=" + nom + ", chef=" + chef + ", villageois=" + Arrays.toString(villageois)
 				+ ", nbVillageois=" + nbVillageois + "]";
 	}
+	public String trouverHabitant(int nmVillageois)
+	{
+		return villageois[nmVillageois];
+		
+		
+	}
 }
