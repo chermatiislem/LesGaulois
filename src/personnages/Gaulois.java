@@ -43,6 +43,9 @@ public class Gaulois {
     public static void main(String[] args) {
 		Gaulois Asterix = new Gaulois("Asterix",8);
 		System.out.println(Asterix);
+		Village village = new Village("b1",30);
+		village.ajouterHabitant(Asterix);
+		System.out.println(village);
 		
 	}
     
