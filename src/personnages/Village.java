@@ -5,8 +5,9 @@ public class Village {
 	private Chef chef;
 	private Gaulois[] villageois;
 	private int nbVillageois =0;
-	public Village(String nom) {
+	public Village(String nom,int nbVillageoisMaximum) {
 	this.nom = nom;
+	villageois = new Gaulois[nbVillageoisMaximum];
 	}
 	public void setChef(Chef chef) 
 	{
@@ -15,5 +16,10 @@ public class Village {
 	
 	public String getNom() {
 	return nom;
+	}
+	public void ajouterHabitant(Gaulois habitantajouter) {
+		villageois[nbVillageois]= habitantajouter;
+		nbVillageois++;
+		
 	}
 }
