@@ -30,9 +30,24 @@ public class Village {
 		return "Village [nom=" + nom + ", chef=" + chef + ", villageois=" + Arrays.toString(villageois)
 				+ ", nbVillageois=" + nbVillageois + "]";
 	}
-	public String trouverHabitant(int nmVillageois)
+	public Gaulois trouverHabitant(int nmVillageois)
 	{
 		return villageois[nmVillageois];
+		
+		
+	}
+	public static void main(String[] args) {
+		Village village =new Village("Village des irréductibles",30);
+		//Gaulois gaulois = village.trouverHabitant(30);
+		//ca produit une erreur car le 30 eme habitant est le numero 29 dan le tableau
+		Chef abraracourcix = new Chef("Abraracourcix",6,village);
+		Gaulois Asterix = new Gaulois("Asterix",8);
+		village.ajouterHabitant(Asterix);
+		village.setChef(abraracourcix);
+		Gaulois gaulois = village.trouverHabitant(0);
+		System.out.println(gaulois);
+		
+		
 		
 		
 	}
